@@ -16,28 +16,25 @@ Configure
 
 Change the following variables to match your settings.
 
-`$companyName = "Your Company Name";
+`$companyName = "Your Company Name";`    
+`$address = <<<EOD`    
+`Street 1<br>`    
+`Street 2<br>`    
 
-$address = <<<EOD
+`City, State Zip<br>`
 
-Street 1<br>
+`EOD;`
 
-Street 2<br>
+`$phone = "888-888-8888";`
 
-City, State Zip<br>  
+`$baseURL = "http://yourwebsite.com";`
 
-EOD;
+`$baseEmail = "hello@yourwebsite.com";`
 
-$phone = "888-888-8888";
+`$icon = $baseURL."/assets/img/favicon.png";`
 
-$baseURL = "http://yourwebsite.com";
+`$stripeKey = "sk_test_";`
 
-$baseEmail = "hello@yourwebsite.com";
-
-$icon = $baseURL."/assets/img/favicon.png";
-
-$stripeKey = "sk_test_";
-
-$publicKey = "pk_test_";`
+`$publicKey = "pk_test_";`
 
 Use by getting the invoice ID from Stripe and send your client a link like https://yourwebsite.com/invoice.php?i=in_lkj34234nkj32alkj324
