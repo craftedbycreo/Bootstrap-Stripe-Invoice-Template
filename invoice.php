@@ -21,7 +21,12 @@ $publicKey = "pk_test_";
 		require('stripe/Stripe.php');
 		Stripe::setApiKey($stripeKey);
 
-		$invoice = Stripe_Invoice::retrieve($invoiceID);
+		try {
+			$invoice = Stripe_Invoice::retrieve($invoiceID);
+		} catch(Stripe_InvalidRequestError $e) {
+			header( 'Location: '.$baseURL );
+			exit;
+		}
 		$customer = Stripe_Customer::retrieve($invoice->customer);
 		$alreadyPaid = $invoice->closed;
 		$token = $_POST['stripeToken'];
