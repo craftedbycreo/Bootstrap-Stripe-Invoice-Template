@@ -10,9 +10,12 @@ This a super simple PHP invoice template for a Stripe invoice object built using
 * Website:   <https://craftedbycreo.com>
 * GitHub:    <https://github.com/craftedbycreo/Bootstrap-Stripe-Invoice-Template>
 
+Based on Patrick Talmadge's work: https://github.com/patricktalmadge/Bootstrap-Stripe-Invoice-Template
 
 Configure 
 =========
+
+Be sure to put the Stripe PHP library in your invoice directory. You can get it here: https://github.com/stripe/stripe-php/tree/master/lib - just place those files and folders into a folder called stripe.
 
 Change the following variables to match your settings.
 
