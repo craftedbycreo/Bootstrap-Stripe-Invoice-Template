@@ -1,26 +1,31 @@
 Welcome to Stripe Invoice Template
 ==================================
-This a super simple PHP invoice template for a Stripe invoice object built using Twitter's Bootstrap. 
+This a super simple PHP invoice template for a Stripe invoice object built using Twitter's Bootstrap. It will list all Invoice items, allow users to pay for the invoice using Stripe's Checkout.js, and see paid invoices.
 
 
-* Author:    Patrick Talmadge
-* Date:      April 4, 2012
-* Last mod.: April 4, 2012
-* Version:   0.5.0
-* Website:   <http://patricktalmadge.github.com/Bootstrap-Stripe-Invoice-Template/>
-* GitHub:    <https://github.com/patricktalmadge/Bootstrap-Stripe-Invoice-Template>
-* Twitter: 	 <http://twitter.com/patricktalmadge>
+* Author:    Danny Summerlin
+* Date:      February 10, 2014
+* Last mod.: February 10, 2014
+* Version:   0.6.0
+* Website:   <https://craftedbycreo.com>
+* GitHub:    <https://github.com/craftedbycreo/Bootstrap-Stripe-Invoice-Template>
 
 
 Configure 
 =========
 
-Change the following variable to match your Stripe account keys.
-$stripeKey = "{PRIVATE_KEY}";
+Change the following variables to match your settings.
+$companyName = "Your Company Name";
+$address = <<<EOD
+Street 1<br>
+Street 2<br>
+City, State Zip<br>
+EOD;
+$phone = "888-888-8888";
+$baseURL = "http://yourwebsite.com";
+$baseEmail = "hello@yourwebsite.com";
+$icon = $baseURL."/assets/img/favicon.png";
+$stripeKey = "sk_test_";
+$publicKey = "pk_test_";
 
-I had $invoiceID hard coded for a sample you should change this value to meet your needs.
-
-$invoiceID = 'in_123456789';
-
-i.e $invoiceID = $_GET["id"] if you want a url like http://www.xyz.com/invoice.php?id=in_123456789 
-    
+Use by getting the invoice ID from Stripe and send your client a link like https://yourwebsite.com/invoice.php?i=in_lkj34234nkj32alkj324
